@@ -1,0 +1,101 @@
+<section class='product'>
+    <div class="links-row">
+        <a href="./index.html" class="links-row__link links-row__main links-row__prev">Главная</a>
+        <a href="./catalog.html" class="links-row__link links-row__this-page links-row__prev">Каталог</a>
+        <a href="#" class="links-row__link links-row__this-page links-row__this-item"></a>
+    </div>
+    <section class="inform">
+
+        <div class="inform__picture">
+            <div class="inform__image inform__main-image main-image">
+                <div class="main-image__sale">
+                    <svg ><use xlink:href="./images/Sprite.svg#product-card-round-sales"></use></svg>
+                    <span id="sale">10%</span>
+                </div>
+                <div class="main-image__like">
+                    <svg ><use xlink:href="./images/Sprite.svg#product-card-like"></use></svg>
+                    <svg ><use xlink:href="./images/Sprite.svg#product-card-like_active"></use></svg>
+                </div>
+                <div class="inform__image main-image__picture"></div>
+            </div>
+            <div class="inform__swiper swiper">
+                <div class="swiper-wrapper inform__wrapper">
+                    <!-- Картинки слайдера -->
+                </div>
+            </div>
+        </div>
+
+        <div class="inform__main ">
+            <a href="#" class="inform__categoty"><span class="categoty"></span><svg><use xlink:href="./images/Sprite.svg#product-card-category-arrow"></use></svg></a>
+
+            <h2 class="inform__title"></h2>
+
+            <div class="inform__product-info">
+                <div class="inform__status-line">
+                    <span class="inform__status">В наличии</span>
+                    <div class="inform__stars"></div>
+                </div>
+    
+                <div class="inform__price">
+                    <div class="inform__this-price"><span data-price="" id="price"></span><span>.00грн.</span></div>
+                    <div class="inform__old-price"><span id="old-price"></span><span id="old-price-null">.00грн.</span></div>
+                </div>
+            </div>
+
+            <ul class="inform__info">
+                <li class="inform__info-item">
+                    <span>Цветы</span>
+                    <span class="inform__info-flowers"></span>
+                </li>
+                <li class="inform__info-item">
+                    <span>Размер</span>
+                    <span class="inform__info-size"></span>
+                </li>
+                <li class="inform__info-item">
+                    <span>Материалы</span>
+                    <span class="inform__info-material"></span>
+                </li>
+                <li class="inform__info-item">
+                    <span>Дополнительно</span>
+                    <span class="inform__info-more"></span>
+                </li>
+            </ul>
+
+            <div class="inform__btn-row btn-row">
+
+                <div class="btn-row__counter counter">
+                    <div class="counter__arrow counter__arrow-left"><svg><use xlink:href="./images/Sprite.svg#product-card-option-arrow"></use></svg></div>
+                    <input class="counter__number" type="number">
+                    <div class="counter__arrow counter__arrow-right"><svg><use xlink:href="./images/Sprite.svg#product-card-option-arrow"></use></svg></div>
+                </div>
+
+                <div class="btn-row__btn btn">В корзину</div>
+            </div>
+
+            <form class="inform__fast-order fast-order">
+                <h3 class="fast-order__title">Быстрый заказ</h3>
+                <div class="fast-order__main">
+                    <div class="fast-order__input-line">
+                        <input class="fast-order__input" id="input-phone" aria-label="fast order" type="text">
+                        <button aria-label="fast order button" class="fast-order__btn btn"><span>Быстрый заказ</span><svg class="fast-order__btn-arrow"><use xlink:href="./images/Sprite.svg#product-card-btn-arrow"></use></svg></button>
+                    </div>
+                    <div class="fast-order__error"></div>
+                </div>
+            </form>
+            <div class="inform__tabs tabs tabs_description">
+                <ul class="tabs__line">
+                    <li class="tabs__btn tabs__btn-delivery">Доставка<svg class="tabs__btn-delivery"><use class="tabs__btn-delivery" xlink:href="./images/Sprite.svg#product-card-tabs-arrow"></use></svg></li>
+                    <li class="tabs__btn tabs__btn-description">Описание<svg class="tabs__btn-description"><use class="tabs__btn-description" xlink:href="./images/Sprite.svg#product-card-tabs-arrow"></use></svg></li>
+                    <li class="tabs__btn tabs__btn-reviews">Отзывы(<span class="tabs__reviews-quantity"></span>)<svg class="tabs__btn-reviews" ><use class="tabs__btn-reviews" xlink:href="./images/Sprite.svg#product-card-tabs-arrow"></use></svg></li>
+                </ul>
+                <div class="tabs__info tabs__info-delivery"></div>
+                <div class="tabs__info tabs__info-description"></div>
+                <div class="tabs__info tabs__info-reviews">
+                    <div class="reviews-container"></div>
+                    <a href="./reviews.html" class="tabs__more-reviews">Посмотреть все коментарии</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+

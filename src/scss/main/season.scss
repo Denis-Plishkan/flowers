@@ -1,0 +1,80 @@
+.season {
+  position: relative;
+  margin-bottom: 162px;
+  @include breakpoint($md5) {
+    margin-bottom: 42px;
+  }
+
+  &__title {
+    color: #333;
+    text-align: center;
+    font-family: Actor;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 74px;
+    padding-top: 15px;
+
+    @include breakpoint($md5) {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @include breakpoint($md4) {
+      padding-bottom: 42px;
+    }
+    @include breakpoint($md5) {
+      row-gap: 9px;
+      column-gap: 9px;
+    }
+  }
+
+  &__swiper-buttons {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include breakpoint($md4) {
+        display: none;
+    }
+  }
+
+  &__swiper-pagination {
+    display: none;
+    @include breakpoint($md4) {
+      display: block;
+    }
+  }
+}
+
+.season__swiper-pagination .swiper-pagination-bullet {
+  background: #956d84 !important;
+  opacity: 1 !important;
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.season__swiper-pagination .swiper-pagination-bullet-active {
+  background: #956d84 !important;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #956d84;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

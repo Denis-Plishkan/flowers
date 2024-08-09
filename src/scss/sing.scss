@@ -1,0 +1,39 @@
+@import 'style';
+@import 'components/sing-registration';
+@import 'components/button';
+
+
+.sing {
+    max-width: 500px;
+    margin: 20vh auto 30vh;
+    @include breakpoint($md5) {
+        margin: 15vh auto 20vh;
+    }
+    &__title{
+        color: $mainDarkColor;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 400;
+        text-align: center;
+        margin-bottom: 30px;
+        @include breakpoint($md4) {
+            font-size: 24px;
+        }
+    }
+    &__btn {
+        height: 50px;
+        margin-bottom: 30px;
+    }
+    &__link {
+        display: block;
+        max-width: 100px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 14px;
+        color: $gray3Color;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+

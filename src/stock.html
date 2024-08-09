@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'stock' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="page__container">
+            <section class="catalog">
+                <div class="catalog__link-row">
+                    @@include('html/stock/links-row.html')
+                </div>
+                <div class="catalog__title">Акции</div>
+                <section class="catalog__main">
+                    @@include('html/stock/left-menu.html', {'parents-class': 'catalog__menu'})
+                    @@include('html/stock/sort.html', {'parents-class': 'catalog__sort'})
+                    @@include('html/stock/cards.html', {'parents-class': 'catalog__cards'})
+                </section>
+                @@include('html/stock/bottom-info.html', {'parents-class': 'catalog__bottom-info'})
+            </section>
+            @@include('html/background.html')
+        </div>
+      </main>
+      @@include('html/footer.html') 
+    </div>
+  </body>
+  <script async src="js/stock.min.js"></script>
+</html>

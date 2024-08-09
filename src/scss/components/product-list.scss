@@ -1,0 +1,138 @@
+.categories-list {
+  &__category {
+    padding: 12px 14px 12px 14px;
+    transition: $standartTrans;
+  }
+}
+
+.pull-down {
+  position: relative;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin: 0rem 0.3571rem 0rem 0rem;
+
+    &:hover {
+      color: $cheryColor;
+    }
+  }
+
+  &__arrow {
+    width: 0.7143rem;
+    height: 0.4081rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.active {
+      transform: rotateZ(180deg);
+    }
+  }
+
+
+  &__list {
+    position: absolute;
+    top: calc(100%); // + 10px
+    right: -5px;
+    max-width: 100%;
+    min-width: 240px;
+    padding: 0px 0px 0px 0px;
+    background: $whiteColor;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: $standartTrans;
+    z-index: 5;
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+    border: 1px solid #956d84;
+
+    &::-webkit-scrollbar {
+      width: 0em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+  }
+
+  &__list-item {
+    padding: 12px 14px 12px 14px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $cheryColor;
+      color: $whiteColor;
+    }
+  }
+
+  &__secondary-list {
+    padding: 17px 0;
+    min-width: 240px;
+    position: absolute;
+    left: 100%;
+    border: 1px solid #956d84;
+    background: #ffff;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &__secondary-list-item {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 26px 0 15px;
+
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 18px;
+    cursor: pointer;
+    &:hover {
+      background-color: #956d84;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+#menuHover {
+  &.active {
+    background-color: #956d84;
+    .pull-down__title {
+      color: #fff;
+    }
+    .pull-down__secondary-list {
+      max-height: 300px;
+      overflow-y: auto !important;
+      opacity: 1;
+      overflow: visible;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+  &:hover {
+    background-color: #956d84;
+    .pull-down__title {
+      color: #fff;
+    }
+  }
+}
+

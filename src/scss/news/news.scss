@@ -1,0 +1,328 @@
+.news {
+  margin-top: 48px;
+  margin-bottom: 80px;
+
+  @include breakpoint($md6) {
+    margin-bottom: 60px;
+    margin-top: 23px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 37px;
+    margin-bottom: 48px;
+
+    @include breakpoint($md4) {
+      display: none;
+    }
+    a {
+      color: #828282;
+      font-family: AguafinaScript;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-line: underline;
+
+      &:last-child {
+        text-decoration-line: none;
+      }
+    }
+  }
+
+
+  &__title {
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 102px;
+
+    @include breakpoint($md4) {
+      font-size: 24px;
+    }
+
+    @include breakpoint($md6) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__swiper {
+    padding-top: 99px !important;
+  }
+
+  &__card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 126px;
+    justify-content: center;
+    position: relative;
+
+    @include breakpoint($md6) {
+      row-gap: 93px;
+    }
+  }
+
+
+  &__card {
+    padding: 0 5px;
+    margin-top: 40px;
+    width: 460px;
+    height: 410px;
+    background: #956d84;
+
+    @include breakpoint($md3) {
+      &:nth-child(6) {
+        display: none;
+      }
+      &:nth-child(7) {
+        display: none;
+      }
+      &:nth-child(8) {
+        display: none;
+      }
+
+      @include breakpoint($md5) {
+        width: 287px;
+        height: 231px;
+        margin-top: 22px;
+      }
+    }
+
+    @include breakpoint($md4) {
+      &:nth-child(5) {
+        display: block;
+      }
+    }
+  }
+
+  &__card-img {
+    position: relative;
+    bottom: 140px;
+    text-align: center;
+
+    @include breakpoint($md5) {
+      bottom: 90px;
+    }
+
+    img {
+      @include breakpoint($md5) {
+        width: 100%;
+        object-fit: cover;
+        height: 214px;
+        max-width: 260px;
+      }
+    }
+  }
+
+  &__card-title {
+    color: #fff;
+    font-family: Acme;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 25px;
+    position: relative;
+    bottom: 113px;
+    left: 12px;
+    max-width: 380px;
+    @include breakpoint($md5) {
+      font-size: 14px;
+      bottom: 83px;
+      left: 3px;
+      max-width: 255px;
+    }
+  }
+
+  &__card-text {
+    color: #fff;
+    font-family: Aclonica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    position: relative;
+    bottom: 86px;
+    left: 13px;
+    max-width: 400px;
+    @include breakpoint($md5) {
+      font-size: 12px;
+      bottom: 74px;
+      left: 6px;
+      max-width: 264px;
+    }
+  }
+
+  &__card-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    position: relative;
+    bottom: 63px;
+    left: 12px;
+    cursor: pointer;
+    @include breakpoint($md5) {
+      display: none;
+    }
+  }
+
+  &__swiper-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 470px;
+    margin-top: 86px;
+
+    @include breakpoint($md4) {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0;
+    }
+    @include breakpoint($md6) {
+      margin-top: 55px;
+    }
+  }
+
+
+  &__swiper-pagination {
+  }
+
+  &__swiper-button-desktop {
+    @include breakpoint($md3) {
+      display: none;
+    }
+  }
+
+  &__swiper-button-prev {
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+
+    svg path {
+      fill: black;
+    }
+
+    svg {
+      width: 60px;
+      height: 60px;
+
+      @include breakpoint($md6) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  &__swiper-button-next {
+    position: relative;
+    z-index: 1000;
+    transform: rotate(180deg);
+    cursor: pointer;
+
+    svg path {
+      fill: black;
+    }
+
+    svg {
+      width: 60px;
+      height: 60px;
+
+      @include breakpoint($md6) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  &__button {
+    width: 220px;
+    height: 63px;
+    color: #fff;
+    font-family: Actor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    border-radius: 7px;
+    background: #956d84;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 58px;
+    margin-bottom: 49px;
+    transition: all 0.2s ease;
+
+    @include breakpoint($md6) {
+      width: 100%;
+      height: 50px;
+      margin-top: 68px;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__button-text {
+    color: #fff;
+    text-align: center;
+    font-family: AbyssinicaSIL;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  &__swiper-pagination {
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      font-family: AguafinaScript;
+      font-size: 24px;
+      color: #b0b9c0;
+      margin-right: 50px !important;
+      width: 0 !important;
+
+      @include breakpoint($md5) {
+        font-size: 16px;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      color: #fff;
+      z-index: 2;
+      background: transparent !important;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 56px;
+        height: 56px;
+        border-radius: 10%;
+        background: #d6c5cf;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        
+        @include breakpoint($md6) {
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+  }
+}
+
+.news__swiper-button-next.swiper-button-disabled svg path {
+  fill: gray;
+}
+.news__swiper-button-prev.swiper-button-disabled svg path {
+  fill: gray;
+}
+
+.news__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 20px;
+
+  @include breakpoint($md6) {
+    bottom: 13px;
+  }
+}

@@ -1,0 +1,61 @@
+.btn{
+    display: block;
+    background: $cheryColor;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    color: $whiteColor;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px; 
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 200ms ease 0s;
+    cursor: pointer;
+    span{
+        color: $whiteColor;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100px;
+        height: 70px;
+        top: 0%;
+        right: 0;
+        background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/gh-pages/images/btn-bg.svg) right  0 no-repeat;
+    }
+    @media (min-width: 1024px) {
+        &:hover{
+            background: #a16969;
+            color: #000;
+            span{
+                color: #000;
+            }
+        }
+        &:focus{
+            outline: 1px solid #a16969;
+        }
+        &:active{
+            background: $whiteColor;
+            outline: 2px solid #a16969;
+            color: #000;
+            span{
+                color: #000;
+            }
+        }
+    }
+    @media (max-width:768px) {
+        font-size: 12px;
+    }
+
+}
+
+.btn-wrapper{
+    width: 200px;
+    height: 63px;
+}
+

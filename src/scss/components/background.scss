@@ -1,0 +1,106 @@
+.background {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    @include breakpoint($md0){
+        width: 1920px;
+    }
+    @include breakpoint($md3) {
+        display: none;
+    }
+    &__left {
+        position: absolute;
+        left: -320px;
+        height: 100%;
+        width: 590px;
+        display: grid;
+        grid-auto-rows: 780px;
+        &-img{
+            &:nth-child(2n+1) {
+                margin-left: 40px;
+            }
+        }
+        &_hidden{
+            display: none;
+        }
+    }
+    &__right {
+        position: absolute;
+        margin-top: 310px;
+        right: -355px;
+        height: 100%;
+        width: 590px;
+        display: grid;
+        justify-items: end;
+        grid-auto-rows: 780px;
+        &-img{
+            &:nth-child(2n+1) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+// .background {
+//     position: absolute;
+//     z-index: -5;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     margin: 0 auto;
+//     width: 100%;
+//     height: 100%;
+//     bottom: 0;
+//     @include breakpoint($md0){
+//         width: 1920px;
+//     }
+//     @include breakpoint($md3) {
+//         display: none;
+//     }
+//     &__image {
+//         position: absolute;
+//     }
+//     &__left {
+//         &-one {
+//             bottom: 820px;
+//             left: -310px;
+//         }
+//         &-two {
+//             bottom: 1696px;
+//             transform: rotate(-4deg);
+//             left: -169px;
+//         }
+//         &-three {
+//             bottom: 2474px;
+//             left: -333px;
+//         }
+//         &-four {
+//             bottom: 3260px;
+//             left: -320px;
+//         }
+//     }
+//     &__right {
+//         &-one {
+//             bottom: 311px;
+//             right: -309px;
+//         }
+//         &-two {
+//             bottom: 1344px;
+//             right: -339px;
+//         }
+//         &-three {
+//             bottom: 2214px;
+//             right: -339px;
+//         }
+//         &-four {
+//             bottom: 2970px;
+//             right: -339px;
+//         }
+//     }
+// }
+

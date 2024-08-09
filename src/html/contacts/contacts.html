@@ -1,0 +1,58 @@
+<section class="contacts">
+  <div class="contacts__nav">
+    <a href="./index.html">Главная</a>
+    <a href="#">Информация</a>
+    <a href="#">Корпоративным клиентам</a>
+  </div>
+  <h1 class="contacts__title">Контакты</h1>
+
+  <div class="contacts__info">
+    <div class="contacts__info-left">
+      <h2 class="contacts__info-title contacts__info-top-title">Свяжитесь с нами</h2>
+      <p class="contacts__info-left-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+        lacus vel facilisis.
+      </p>
+      <div class="contacts__info-left-contacts">
+        <svg><use xlink:href="./images/Sprite.svg#gps"></use></svg>
+        <p>м.Миколаїв</p>
+      </div>
+      <div class="contacts__info-left-contacts">
+        <svg><use xlink:href="./images/Sprite.svg#contacts-tel"></use></svg>
+        <p>+380 99 123 1234</p>
+      </div>
+      <div class="contacts__info-left-contacts">
+        <svg><use xlink:href="./images/Sprite.svg#contacts-clock"></use></svg>
+        <p>Пн - Пт: 09:00 - 20:00 Сб - Вс 09:00 - 15:00</p>
+      </div>
+    </div>
+    <div class="contacts__info-right">
+      <h2 class="contacts__info-title">Заполните форму для обратной связи</h2>
+
+      <form action="#" class="contacts__form" id="contactsForm" autocomplete="off">
+        <div class="contacts__form-el">
+          <span>Ваше имя</span>
+          <input type="text" placeholder="Иван Иванов" id="contactsName" autocomplete="off" name="name" />
+        </div>
+        <div class="contacts__form-el">
+          <span>E-Mail адрес</span>
+          <input type="mail" id="contactsMail" autocomplete="off" name="email" />
+        </div>
+        <div class="contacts__form-el">
+          <span>Ваше сообщение</span>
+          <input type="text" id="contactsText" autocomplete="off" name="message"  />
+        </div>
+
+        <button type="submit" class="contacts__button">
+          Отправить
+          <img
+            src="./images/main/stock/button-branch.png"
+            alt="button-branch"
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

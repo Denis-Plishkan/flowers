@@ -1,0 +1,577 @@
+.basket {
+  margin-bottom: 127px;
+  margin-top: 49px;
+
+  @include breakpoint($md5) {
+    margin-bottom: 66px;
+  }
+  @include breakpoint($md6) {
+    margin-top: 24px;
+  }
+  // .basket__nav
+
+  &__nav {
+    display: flex;
+    gap: 37px;
+    margin-bottom: 47px;
+
+    @include breakpoint($md4) {
+      display: none;
+    }
+    a {
+      color: #828282;
+      font-family: AguafinaScript;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-line: underline;
+
+      &:last-child {
+        text-decoration-line: none;
+      }
+    }
+  }
+
+  // .basket__title
+
+  &__title {
+    color: #333;
+    text-align: center;
+    font-family: Actor;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 100px;
+
+    @include breakpoint($md4) {
+      font-size: 40px;
+    }
+    @include breakpoint($md5) {
+      font-size: 24px;
+      margin-bottom: 53px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($md1) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // .basket__wrapper
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+  }
+
+  &__wrapper-navs {
+    @include breakpoint($md1) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include breakpoint($md3) {
+      justify-content: flex-end;
+    }
+  }
+
+  // .basket__wrapper-left
+
+  &__wrapper-left {
+  }
+
+  // .basket__wrapper-text
+
+  &__wrapper-text {
+    display: none;
+    padding-left: 170px;
+    gap: 145px;
+    margin-bottom: 11px;
+
+    @include breakpoint($md1) {
+      padding-left: 14px;
+    }
+
+    @include breakpoint($md3) {
+      display: none;
+    }
+    p {
+      color: #bdbdbd;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  &__wrapper-text-mobile {
+    display: none;
+    // @include breakpoint($md1) {
+    //   display: block;
+    // }
+  }
+
+  // .basket__wrapper-card
+
+  &__wrapper-card {
+  }
+
+  &__card-center-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 94px;
+
+    @include breakpoint($md3) {
+      gap: 40px;
+    }
+    @include breakpoint($md4) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include breakpoint($md5) {
+      gap: 7px;
+      justify-content: start;
+    }
+  }
+
+  // .basket__card
+
+  &__card {
+    border: 1px solid #828282;
+    padding: 26px 70px 26px 26px;
+    display: flex;
+    width: 980px;
+    justify-content: space-between;
+    margin-bottom: 13px;
+
+    @include breakpoint($md3) {
+      max-width: 980px;
+      width: 100%;
+    }
+    @include breakpoint($md4) {
+      padding-right: 15px;
+    }
+    @include breakpoint($md5) {
+      padding: 13px 15px 13px 9px;
+    }
+  }
+
+  &__card-all-price-wrapper {
+    display: flex;
+    gap: 58px;
+
+    @include breakpoint($md3) {
+      gap: 0;
+    }
+    @include breakpoint($md4) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  // .basket__card-img
+
+  &__card-img {
+    @include breakpoint($md3) {
+      margin-right: 20px;
+    }
+    img {
+      width: 83px;
+      height: 104px;
+      object-fit: contain;
+
+      @include breakpoint($md5) {
+        width: 45px;
+        height: 62px;
+      }
+    }
+  }
+
+  // .basket__card-name
+
+  &__card-name {
+    width: 192px;
+    @include breakpoint($md4) {
+      text-align: center;
+    }
+    @include breakpoint($md5) {
+      width: 140px;
+      text-align: left;
+    }
+    p {
+      color: #333;
+      font-family: Actor;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+
+      @include breakpoint($md5) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // .basket__card-price
+
+  &__card-price {
+    @include breakpoint($md4) {
+      display: none;
+    }
+  }
+
+  // .basket__card-new-price
+
+  &__card-new-price {
+    color: #333;
+    font-family: Acme;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  // .basket__card-old-price
+
+  &__card-old-price {
+    color: #bdbdbd;
+    font-family: Acme;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration-line: line-through;
+  }
+
+  // .basket__card-num-wrapper
+
+  &__card-num-wrapper {
+    width: 94px;
+    height: 42px;
+    border: 1px solid #956d84;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    @include breakpoint($md3) {
+      margin-right: 25px;
+    }
+    @include breakpoint($md5) {
+      width: 83px;
+      height: 29px;
+    }
+  }
+
+  // .basket__card-arrow-left
+
+  &__card-arrow-left {
+    cursor: pointer;
+
+    svg {
+      width: 7px;
+      height: 14px;
+    }
+  }
+
+  // .basket__card-num
+
+  &__card-num {
+    p {
+      color: #333;
+      font-family: AguafinaScript;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+
+      @include breakpoint($md5) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  // .basket__card-arrow-right
+
+  &__card-arrow-right {
+    cursor: pointer;
+
+    svg {
+      width: 7px;
+      height: 11px;
+    }
+  }
+
+  // .basket__card-all-price
+
+  &__card-all-price {
+    display: flex;
+    align-items: center;
+    width: 64px;
+
+    @include breakpoint($md3) {
+      margin-right: 25px;
+    }
+    @include breakpoint($md4) {
+      margin-right: 0;
+    }
+    p {
+      color: #333;
+      font-family: Actor;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+
+      @include breakpoint($md4) {
+        display: flex;
+        gap: 5px;
+      }
+    }
+  }
+
+  // .basket__card-del-wrapper
+
+  &__card-del-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  // .basket__card-del
+
+  &__card-del {
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__like {
+    top: 42px;
+    right: -40px;
+    width: 21px;
+    height: 19px;
+
+    @include breakpoint($md4) {
+      top: 4px;
+      right: -6px;
+    }
+
+    svg {
+      width: 21px;
+      height: 19px;
+    }
+  }
+
+  &__right-nav-desktop {
+    @include breakpoint($md1) {
+      display: none;
+    }
+  }
+
+  // .basket__right-nav
+
+  &__right-nav {
+    display: flex;
+    gap: 23px;
+    justify-content: flex-end;
+    margin-bottom: 11px;
+    align-items: center;
+
+    @include breakpoint($md5) {
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: #bdbdbd;
+      font-family: AguafinaScript;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-line: underline;
+      cursor: pointer;
+
+      @include breakpoint($md5) {
+        font-size: 14px;
+      }
+    }
+
+    svg {
+      width: 7px;
+      height: 12px;
+    }
+  }
+
+  &__wrapper-right {
+    display: none;
+    @include breakpoint($md5) {
+      width: 100%;
+    }
+  }
+
+  &__wrapper-right-content {
+    width: 415px;
+    border: 1px solid #828282;
+    padding: 59px 85px 30px 73px;
+
+    @include breakpoint($md5) {
+      width: 100%;
+      padding: 35px 17px 26px 17px;
+    }
+  }
+
+  // .basket__wrapper-right-title
+
+  &__wrapper-right-title {
+    color: #956d84;
+    font-family: Actor;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-bottom: 70px;
+
+    @include breakpoint($md5) {
+      font-size: 24px;
+      padding-bottom: 30px;
+    }
+  }
+
+  // .basket__wrapper-right-inner
+
+  &__wrapper-right-inner {
+  }
+
+  // .basket__wrapper-right-prices
+
+  &__wrapper-right-prices {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    p {
+      color: #333;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-products
+
+  &__wrapper-right-products {
+    p {
+      color: #bdbdbd;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  &__wrapper-right-products-text {
+    color: #bdbdbd !important;
+  }
+
+  // .basket__wrapper-right-stock
+
+  &__wrapper-right-stock {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 58px;
+
+    @include breakpoint($md5) {
+      padding-bottom: 38px;
+    }
+
+    p {
+      color: #333;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-all
+
+  &__wrapper-right-all {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 64px;
+
+    @include breakpoint($md5) {
+      padding-bottom: 40px;
+    }
+    p {
+      color: #333;
+      font-family: Actor;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .basket__wrapper-right-all-text
+
+  &__wrapper-right-all-text {
+    color: #333;
+    font-family: Acme;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include breakpoint($md5) {
+      font-size: 16px !important;
+    }
+  }
+  
+  &__message {
+    display: none;
+    text-align: center;
+  }
+
+  &__button-wrapper-desktop {
+    color: #fff;
+    font-family: Actor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 220px;
+    height: 63px;
+    border-radius: 7px;
+    background: #956d84;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
+
+    img {
+      position: absolute;
+      right: 0;
+      pointer-events: none;
+    }
+
+    @media (min-width: 998px) {
+      &:hover {
+        background: #a16969;
+        color: $blackColor;
+      }
+    }
+
+    @include breakpoint($md2) {
+      width: unset;
+      max-width: 220px;
+    }
+  }
+}

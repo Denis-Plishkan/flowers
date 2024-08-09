@@ -1,0 +1,289 @@
+// 375px, 576px, 768px, 1024px, 1420px, 1650px, 1920px
+
+.left-menu {
+    overflow: auto;
+    position: relative;
+    &__adaptive-top {
+        display: none;
+        background: $mainDarkColor;
+        height: 72px;
+        align-items: center;
+        padding: 0 16px 0 19px;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+    &__adaptive-title {
+        color: $whiteColor;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.9px;
+    }
+    &__adaptive-back {
+        box-sizing: content-box;
+        width: 14px;
+        height: 14px;
+        padding: 5px;
+        position: relative;
+        &::after, &::before{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 16px;
+            background-color: $whiteColor;
+            transform-origin: center center;
+        }
+        &::after{
+            left: 11px;
+            top: 4px;
+            transform: rotate(-45deg);
+        }
+        &::before{
+            right: 11px;
+            top: 4px;
+
+            transform: rotate(45deg);
+        }
+    }
+    &__button{
+        display: none;
+        width: 122px;
+        height: 35px;
+        margin: 20px 0 24px 14px;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+    &__main {
+        background-color: $whiteColor;
+    }
+    &__menu-item {
+        transition: all 1s ease 0s;
+        @media (max-width: 768px) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            &:first-child{
+                .left-menu {
+                    &__title {
+                        padding: 22px 0 23px 15px;
+                    }
+                }
+            }
+        }
+    }
+    &__list {
+        // display: none;
+        opacity: 0;
+        position: absolute;
+        top: -1000px;
+
+    }
+    &__title {
+        user-select: none;
+        cursor: pointer;
+        height: 48px;
+        line-height: 48px;
+        display: block;
+        color: $mainDarkColor;
+        font-size: 20px;
+        font-weight: 400;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/gh-pages/images/catalog/filter-arrow.svg);
+            transition: all 0.3s ease 0s;
+            width: 17.6664px;;
+            height: 8.1px;
+        }
+        &:hover{
+            color: $cheryColor;
+            &::after{
+                background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/gh-pages/images/catalog/filter-arrow-hover.svg);
+            }
+        }
+        @media (max-width: 768px) {
+            box-sizing: content-box; 
+            color: $cheryColor;
+            font-size: 16px;
+            padding: 26px 0 23px 15px;
+            height: 18px;
+            line-height: 18px;
+            width: 100%;
+            &::after{
+                right: 27px;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+            &:hover{
+                &::after{
+                    background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/gh-pages/images/catalog/filter-arrow.svg);
+                }
+            }
+        }
+    }
+    &__title_active{
+        padding-bottom: 8px;
+        .left-menu {
+            &__list {
+                top: 0;
+                padding-top: 19px;
+                position: relative;
+                transition: opacity 0.5s ease 0s;
+                opacity: 1;
+                @media (max-width:768px) {
+                    padding: 0 0 3px;
+                }
+            }
+            &__title {
+                &::after{
+                    transform: rotate(180deg) translateY(30%);
+                    transform-origin: center;
+                    @media (max-width: 768px) {
+                        transform: translateY(-50%) rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+    &__point {
+        padding-left: 33px;
+        input{
+            display: none;
+        }
+        label{
+            user-select: none;
+            cursor: pointer;
+            color: $cheryColor;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            padding: 10px 0;
+            display: block;
+            letter-spacing: 0.35px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -28px;
+                width: 100%; 
+                height: 100%;
+                background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/gh-pages/images/catalog/done.svg) 0px 11px no-repeat;
+                opacity: 0;
+            }
+        }
+        input:checked + label::before {
+            opacity: 1;
+        }
+        &:hover{
+            background-color: $cheryColor;
+            label{
+                color: $whiteColor;
+                &::before {
+                    background: url(https://raw.githubusercontent.com/ArtemKliuiev/Flowers/gh-pages/images/catalog/done-hover.svg)0px 11px no-repeat;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        background-color: $whiteColor;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -200%;
+        transition: all 300ms ease 0s;
+    }
+    &_active{
+        @media (max-width: 768px) {
+            left: 0;
+        }
+    }
+    &_sort-active{
+        overflow: hidden;
+        &::before{
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.43);
+        }
+    }
+}
+.button-for-left-menu{
+    display: none;
+    height: 100%;
+    @media (max-width:768px) {
+        display: block;
+    }
+}
+
+
+.sort-adaptive{
+    display: none;
+    @media (max-width: 768px) {
+        display: block;
+    }
+    &__main{
+        &_active{
+            .sort-adaptive {
+                &__menu {
+                    opacity: 1;
+                    left: 50%;
+                }
+            }
+        }
+    }
+    &__btn{
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 53px;
+        padding: 0 15px;
+    }
+    &__info {
+        color: $cheryColor;
+    }
+    &__menu {
+        margin-top: 72px;
+        position: fixed;
+        z-index: 1;
+        background-color: $whiteColor;
+        top: 0;
+        opacity: 0;
+        transition: opacity 1s ease 0s;
+        left: -200%;
+        transform: translateX(-50%);
+        width: 91%;
+        padding-bottom: 15px;
+        border: 1px solid #956D84;
+    }
+    &__menu-title {
+        color: $cheryColor;
+        margin: 20px 0 16px 38px;
+        letter-spacing: 1px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    &__point {
+        letter-spacing: 0.5px;
+        padding-left: 38px;
+        height: 43px;
+        line-height: 43px;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}

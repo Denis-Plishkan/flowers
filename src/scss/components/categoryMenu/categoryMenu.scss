@@ -1,0 +1,19 @@
+#categoryMenu {
+  transition: all 0.4s;
+  position: static;
+  top: -100%;
+  &._active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffff;
+    height: 100%;
+    overflow: auto;
+  }
+  .mobile-menu__body {
+    justify-content: unset;
+  }
+}
+

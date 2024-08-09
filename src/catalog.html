@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'catalog' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="page__container">
+            <section class="catalog">
+                <div class="catalog__link-row">
+                    @@include('html/catalog/links-row.html')
+                </div>
+                <div class="catalog__title">Каталог товаров</div>
+                <section class="catalog__main">
+                    @@include('html/catalog/left-menu.html', {'parents-class': 'catalog__menu'})
+                    @@include('html/catalog/sort.html', {'parents-class': 'catalog__sort'})
+                    @@include('html/catalog/cards.html', {'parents-class': 'catalog__cards'})
+                </section>
+                @@include('html/catalog/bottom-info.html', {'parents-class': 'catalog__bottom-info'})
+            </section>
+            @@include('html/background.html')
+        </div>
+      </main>
+      @@include('html/footer.html') 
+    </div>
+  </body>
+  <script async src="js/catalog.min.js"></script>
+</html>

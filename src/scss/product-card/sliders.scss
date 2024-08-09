@@ -1,0 +1,101 @@
+.slider {
+    &__title {
+        color: $mainDarkColor;
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 93px;
+    }
+    &__btn {
+        user-select: none;
+        top: -3px;
+        position: absolute;
+        padding: 5px;
+        cursor: pointer;
+        svg{
+            width: 28px;
+            height: 28px;
+        }
+    }
+    &__btn-next {
+        right: -3px;
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+    &__btn-prev {
+        right: 24px;
+    }
+    .swiper {
+        width: 100%;
+        height: 544px;
+        cursor: grab;
+        user-select: none;
+    }
+    .swiper-slide{
+        width: 340px;
+        aspect-ratio: 1/1 !important;
+    }
+    .swiper-pagination{
+        bottom: -45px !important;
+        height: 20px;
+    }
+    .swiper-pagination-bullet{
+        background: $cheryColor !important;
+        margin: 0 5px !important;
+    }
+    .swiper-pagination-bullet-active{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 10px;
+            border: 1px solid $cheryColor;
+        }
+    }
+}
+
+.first-slider {
+    margin-bottom: 114px;
+    @include breakpoint($md3) {
+        display: none;
+    }
+}
+
+.second-slider {
+    margin-bottom: 75px;
+    @include breakpoint($md3) {
+        display: none;
+    }
+}
+
+.third-slider {
+    position: relative;
+    margin-bottom: 75px;
+    display: none;
+    &__swiper{
+        height: 560px;
+        @include breakpoint($md5) {
+            height: 276px;
+        }
+    }
+    &__title {
+        margin-bottom: 46px;
+        @include breakpoint($md4) {
+            font-size: 24px;
+        }
+    }
+    @include breakpoint($md3) {
+        display: block;
+    }
+}
+
+
+

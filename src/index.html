@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'main' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="page__container">
+          @@include('html/main/certificate.html')
+          @@include('html/main/stock.html')
+          @@include('html/main/season.html')
+          @@include('html/main/present.html')
+          @@include('html/main/forum.html')
+
+          @@include('html/background.html')
+        </div>
+      </main>
+      @@include('html/footer.html') 
+  </body>
+  <script src="js/main.min.js"></script>
+</html>

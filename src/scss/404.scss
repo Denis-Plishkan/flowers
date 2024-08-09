@@ -1,0 +1,74 @@
+@import 'style';
+
+.error {
+    &__title {
+        margin: 100px 0 20px ;
+        font-size: 200px;
+        color: $cheryColor;
+        text-align: center;
+        @include breakpoint($md4) {
+            margin: 80px 0 20px ;
+            font-size: 100px;
+        }
+    }
+    &__info {
+        margin: 20px 0 40px;
+        font-size: 30px;
+        color: $cheryColor;
+        text-align: center;
+        @include breakpoint($md4) {
+            margin: 10px 0 20px;
+            font-size: 16px;
+        }
+    }
+}
+.for-testers {
+    background-color: $gray5Color;
+    max-width: 700px;
+    padding: 25px;
+    margin: 0 auto 100px;
+    @include breakpoint($md4) {
+        margin: 0 auto 50px;
+    }
+    &__info {
+        color: $redColor;
+        margin-bottom: 10px;
+        @include breakpoint($md4) {
+            margin-bottom: 8px;
+        }
+    }
+    &__text {
+        font-size: 20px;
+        margin-bottom: 30px;
+        @include breakpoint($md4) {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+    &__title{
+        margin: 30px 0;
+        font-size: 18px;
+        @include breakpoint($md4) {
+            font-size: 16px;
+        }
+    }
+    &__li {
+        font-size: 14px;
+        padding-left: 10px;
+        position: relative;
+        margin-bottom: 5px;
+        @include breakpoint($md4) {
+            font-size: 12px;
+        }
+        &::after{
+            content: '*';
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+

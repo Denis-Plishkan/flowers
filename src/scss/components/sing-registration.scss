@@ -1,0 +1,56 @@
+.links-row {
+    line-height: 1.125; 
+    font-size: 16px;
+	margin-top: 50px;
+    &__link{
+        color: $gray3Color;
+        &:hover{
+            text-decoration-line: underline;
+        }
+        margin-right: 26px;
+    }
+    &__prev{
+        text-decoration-line: underline;
+    }
+	@include breakpoint($md3) {
+		margin-bottom: 40px;
+    }
+	@include breakpoint($md4) {
+        display: none;
+    }
+}
+
+.input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    border: 1px solid $gray3Color;
+    font-size: 16px;
+    color: $mainDarkColor;
+    &:focus{
+        border: 1px solid $cheryColor;
+    }
+}
+
+.just-validate-error-label{
+    // color: aqua !important;
+}
+
+.label {
+    display: block;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+.invalid {
+    color: $redColor !important;
+    padding-left: 7px;
+    font-size: 14px;
+}
+
+.error-focus{
+    border: 1px solid $redColor;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Flowers', 'srcStyle': 'product-card' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main class="page">
+        <div class="page__container">
+            @@include('html/product-card/main-product-card.html')
+            @@include('html/product-card/sliders.html')
+            @@include('html/background.html')
+        </div>     
+      </main>
+      @@include('html/footer.html') 
+    </div>
+  </body>
+  <script async src="js/productCard.min.js"></script>
+</html>

@@ -1,0 +1,288 @@
+.contacts {
+  margin-top: 49px;
+  margin-bottom: 40px;
+
+  @include breakpoint($md6) {
+    margin-top: 22px;
+  }
+  // .contacts__nav
+
+  &__nav {
+    display: flex;
+    gap: 37px;
+    margin-bottom: 48px;
+
+    @include breakpoint($md4) {
+      display: none;
+    }
+    a {
+      color: #828282;
+      font-family: AguafinaScript;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration-line: underline;
+
+      &:last-child {
+        text-decoration-line: none;
+      }
+    }
+  }
+
+  // .contacts__title
+
+  &__title {
+    color: #333;
+    text-align: center;
+    font-family: Actor;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 112px;
+
+    @include breakpoint($md4) {
+      font-size: 24px;
+    }
+
+    @include breakpoint($md6) {
+      margin-bottom: 47px;
+    }
+  }
+
+  // .contacts__info
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1343px;
+
+    @include breakpoint($md2) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  // .contacts__info-left
+
+  &__info-left {
+  }
+
+  // .contacts__info-title
+
+  &__info-title {
+    color: #333;
+    font-family: Acme;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 42px;
+
+    @include breakpoint($md2) {
+      text-align: center;
+    }
+
+    @include breakpoint($md4) {
+      font-size: 18px;
+    }
+
+    @include breakpoint($md6) {
+      max-width: 250px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__info-top-title {
+    @include breakpoint($md6) {
+      margin-bottom: 28px;
+    }
+  }
+
+  // .contacts__info-left-text
+
+  &__info-left-text {
+    color: #5a5a5a;
+    font-family: Aclonica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 460px;
+    margin-top: 50px;
+    margin-bottom: 3px;
+
+    @include breakpoint($md6) {
+      font-size: 12px;
+      margin-top: 28px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .contacts__info-left-contacts
+
+  &__info-left-contacts {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 37px;
+
+    @include breakpoint($md6) {
+      margin-bottom: 17px;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+
+      @include breakpoint($md6) {
+        width: 18px;
+        height: 22px;
+      }
+    }
+
+    p {
+      max-width: 174px;
+      color: #333;
+      font-family: Acme;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+
+      @include breakpoint($md6) {
+        font-size: 14px;
+        max-width: 140px;
+      }
+    }
+  }
+
+  // .contacts__info-right
+
+  &__info-right {
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+  }
+
+  // .contacts__form
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include breakpoint($md2) {
+      margin-bottom: 80px;
+    }
+
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+
+    @include breakpoint($md6) {
+      gap: 32px;
+      margin-bottom: 56px;
+    }
+  }
+
+  // .contacts__form-name-wrap
+
+  &__form-el {
+    width: 623px;
+    height: 70px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($md3) {
+      width: 100%;
+    }
+
+    @include breakpoint($md6) {
+      height: 54px;
+      padding: 8px 56px;
+    }
+
+    span {
+      position: absolute;
+      background: #fff;
+      color: #bdbdbd;
+      font-family: Aclonica;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      top: -8px;
+      left: 52px;
+      padding: 0 10px;
+
+      @include breakpoint($md5) {
+        left: 33px;
+      }
+
+      @include breakpoint($md6) {
+        max-width: 78px;
+        top: -20px;
+      }
+    }
+
+    input {
+      width: 100%;
+    }
+
+    input::placeholder {
+      color: #333;
+      font-family: Acme;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+
+  // .contacts__form-mail
+
+  &__form-mail {
+  }
+
+  // .contacts__form-text
+
+  &__form-text {
+  }
+
+  &__button {
+    width: 220px;
+    height: 63px;
+    color: #fff;
+    font-family: Actor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    border-radius: 7px;
+    background: #956d84;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 49px;
+    transition: all 0.2s ease;
+
+    @include breakpoint($md2) {
+      margin: 0 auto;
+    }
+
+    @include breakpoint($md6) {
+      width: 100%;
+      height: 50px;
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      pointer-events: none;
+    }
+  }
+}

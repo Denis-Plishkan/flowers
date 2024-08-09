@@ -1,0 +1,368 @@
+.product-card {
+  width: 340px;
+  min-height: 544px;
+  border: 1px solid #956d84;
+  background: #fff;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  @include breakpoint($md4) {
+    width: 257px;
+  }
+
+  @include breakpoint($md5){
+    min-height: 276px;
+    width: 140px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @include breakpoint($md4) {
+      padding-bottom: 42px;
+    }
+    @include breakpoint($md5) {
+      row-gap: 9px;
+      column-gap: 9px;
+    }
+  }
+  // .product-card__top
+
+  &__top {
+    background: #fbf9fa;
+    height: 304px;
+    position: relative;
+    @include breakpoint($md5) {
+      height: 135px;
+    }
+  }
+
+  // .product-card__img
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 280px;
+      max-width: 345px;
+      object-fit: contain;
+
+      @include breakpoint($md2) {
+        max-width: 100%;
+        object-fit: contain;
+      }
+      @include breakpoint($md5) {
+        height: 128px;
+      }
+    }
+  }
+
+  // .product-card__top-sales
+
+  &__top-sales {
+    position: absolute;
+    top: 25px;
+    left: 32px;
+    @include breakpoint($md5) {
+      top: 11px;
+      left: 9px;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      @include breakpoint($md5) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  // .product-card__top-sale
+
+  &__top-sale {
+    font-family: Acme;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include breakpoint($md5) {
+      font-size: 10px;
+    }
+  }
+
+  // .product-card__top-like
+
+  &__top-like {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+    cursor: pointer;
+
+    @include breakpoint($md5) {
+      top: 9px;
+      right: 5px;
+    }
+
+    svg {
+      width: 34px;
+      height: 30px;
+      @include breakpoint($md5) {
+        width: 14px;
+        height: 12px;
+      }
+    }
+
+    &_active {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.2s ease;
+
+      &.active {
+        opacity: 1;
+        overflow: visible;
+      }
+    }
+  }
+
+  // .product-card__top-sign
+
+  &__top-sign {
+    color: #956d84;
+    font-family: AguafinaScript;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    position: absolute;
+    bottom: 46px;
+    right: 28px;
+    @include breakpoint($md5) {
+      font-size: 10px;
+      bottom: 16px;
+      right: 13px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(157, 117, 140, 0.39);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include breakpoint($md5) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+
+  // .product-card__bottom
+
+  &__bottom {
+    padding: 16px 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 308px);
+    @include breakpoint($md5) {
+      padding: 6px 10px;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 137px);
+      justify-content: space-between;
+    }
+  }
+
+  // .product-card__bottom-stars
+
+  &__bottom-stars {
+    padding-bottom: 18px;
+    @include breakpoint($md5) {
+      padding-bottom: 0;
+    }
+
+    svg {
+      width: 74px;
+      height: 15px;
+    }
+
+    img {
+      @include breakpoint($md5) {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+
+  // .product-card__bottom-name-price
+
+  &__bottom-name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 38px;
+
+    @include breakpoint($md2) {
+      flex-direction: column;
+    }
+    @include breakpoint($md5) {
+      padding-bottom: 0;
+    }
+  }
+
+  // .product-card__bottom-name
+
+  &__bottom-name {
+    color: #333;
+    font-family: Acme;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    max-width: 160px;
+
+    @include breakpoint($md2) {
+      max-width: 100%;
+      padding-bottom: 10px;
+    }
+
+    @include breakpoint($md5) {
+      font-size: 12px;
+      padding-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  // .product-card__bottom-prices
+
+  &__bottom-prices {
+  }
+
+  // .product-card__bottom-old-price
+
+  &__bottom-old-price {
+    color: #bdbdbd;
+    font-family: Acme;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration-line: line-through;
+
+    @include breakpoint($md5) {
+      font-size: 12px;
+    }
+  }
+
+  // .product-card__bottom-price
+
+  &__bottom-price {
+    color: #956d84;
+    font-family: Actor;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include breakpoint($md5) {
+      font-size: 14px;
+    }
+  }
+
+  &__bottom-buttons {
+    @include breakpoint($md5) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  // .product-card__bottom-button
+
+  &__bottom-button-desktop {
+    color: #fff;
+    font-family: Actor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 220px;
+    height: 63px;
+    border-radius: 7px;
+    background: #956d84;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
+
+    img {
+      position: absolute;
+      right: 0;
+      pointer-events: none;
+    }
+
+    @media (min-width: 998px) {
+      &:hover {
+        background: #a16969;
+        color: $blackColor;
+      }
+    }
+
+    @include breakpoint($md2) {
+      width: unset;
+      max-width: 220px;
+    }
+    @include breakpoint($md5) {
+      display: none;
+    }
+  }
+
+  &__bottom-button-mobile {
+    display: none;
+
+    svg {
+      width: 22px;
+      height: 16px;
+    }
+    @include breakpoint($md5) {
+      display: block;
+    }
+
+    img {
+      pointer-events: none;
+    }
+  }
+
+  // .product-card__bottom-order
+
+  &__bottom-order {
+    color: #828282;
+    text-align: center;
+    font-family: AguafinaScript;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration-line: underline;
+
+    @include breakpoint($md5) {
+      font-size: 10px;
+    }
+  }
+}

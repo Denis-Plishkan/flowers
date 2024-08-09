@@ -1,0 +1,257 @@
+<section class="order">
+  <div class="order__navs">
+    <a href="./index.html">Главная</a>
+    <a href="./basket.html">Корзина</a>
+    <a href="#">Оформление заказа</a>
+  </div>
+  <h1 class="order__title">Оформление заказа</h1>
+  <form action="#" class="order__form" id="orderForm">
+    <div class="order__form-wrapper">
+      <div class="order__form-wrapper-left order__form-left">
+        <div class="order__form-left-top">
+          <h3 class="order__form-left-top-title">1. Контакты получателя</h3>
+          <div class="order__form-left-top-wrapper">
+            <div class="order__form-name-wrap">
+              <span>Имя получателя *</span>
+              <input
+                type="text"
+                placeholder="Иван Иванов"
+                id="orderRecipientName"
+              />
+              <p class="order__validate-text" id="recipientNameText"></p>
+            </div>
+
+            <div class="order__form-left-top-inner order__form-region">
+              <p>Регион *</p>
+              <label for="dropdown-toggle" class="order-region__dropdown-label">
+                <span class="order-region__label-text">Киев</span>
+                <svg>
+                  <use xlink:href="./images/Sprite.svg#order-arrow"></use>
+                </svg>
+              </label>
+
+              <ul class="order-region__dropdown-menu">
+                <a href="#">
+                  <li>
+                    <span>Киев</span>
+                  </li>
+                </a>
+                <a href="#">
+                  <li>
+                    <span>Харьков</span>
+                  </li>
+                </a>
+                <a href="#">
+                  <li>
+                    <span>Днепр</span>
+                  </li>
+                </a>
+                <a href="#">
+                  <li>
+                    <span>Львов</span>
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="order__form-tel-wrap">
+              <span>Телефон получателя *</span>
+              <input
+                type="tel"
+                placeholder="+380 (98) 00 00 000"
+                id="recipientPhone"
+              />
+              <p class="order__validate-text" id="recipientPhoneText"></p>
+            </div>
+            <div class="order__form-address">
+              <span>Адрес *</span>
+              <input
+                type="text"
+                placeholder="ул. Улица, 12"
+                id="orderRecipientAdress"
+              />
+              <p class="order__validate-text" id="recipientAdressText"></p>
+            </div>
+
+            <div class="order__form-data">
+              <span>Дата доставки</span>
+              <input
+                type="date"
+                placeholder="Дата доставки"
+                id="deliveryDate"
+              />
+              <svg><use xlink:href="./images/Sprite.svg#order-data"></use></svg>
+            </div>
+
+            <div class="order__form-left-top-inner order__form-time">
+              <p>Время доставки</p>
+              <label for="dropdown-toggle" class="order-time__dropdown-label">
+                <span class="order-time__label-text">6:00 - 9:00</span>
+                <svg>
+                  <use xlink:href="./images/Sprite.svg#order-arrow"></use>
+                </svg>
+              </label>
+              <ul class="order-time__dropdown-menu">
+                <li>
+                  <span>6:00 - 9:00</span>
+                </li>
+                <li>
+                  <span>7:00 - 10:00</span>
+                </li>
+                <li>
+                  <span>8:00 - 11:00</span>
+                </li>
+                <li>
+                  <span>9:00 - 12:00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="order__form-left-bottom">
+          <div class="order__form-left-bot">
+            <h3 class="order__form-left-top-title">2. Контакты отправителя</h3>
+            <div class="order__form-left-bot-name">
+              <span>Имя *</span>
+              <input type="text" id="orderSenderName" />
+              <p class="order__validate-text" id="senderNameText"></p>
+            </div>
+            <div class="order__form-left-bot-tel">
+              <span>Телефон *</span>
+              <input type="tel" id="orderSenderTel" />
+              <p class="order__validate-text" id="senderTelText"></p>
+            </div>
+            <div class="order__form-left-bot-mail">
+              <span>Email *</span>
+              <input type="mail" id="orderSenderMail" />
+              <p class="order__validate-text" id="senderMailText"></p>
+            </div>
+          </div>
+          <div class="order__form-left-bot order__form-left-bot-mobile">
+            <h3
+              class="order__form-left-top-title order__form-left-top-title-three"
+            >
+              3. Детали доставки
+            </h3>
+            <div class="order__form-left-button-wrappers">
+              <div class="order__form-left-button-wrapper">
+                <input type="checkbox" class="order__form-check" />
+                <span>Доставка сюрпризом</span>
+              </div>
+              <div class="order__form-left-button-wrapper">
+                <input type="checkbox" class="order__form-check" />
+                <span id="orderPrice">Фотоотчет (+ 15 грн)</span>
+              </div>
+              <div class="order__form-left-button-wrapper">
+                <input type="checkbox" class="order__form-check" />
+                <span id="orderPrice">Добавить вазу (+ 249 грн)</span>
+              </div>
+              <div class="order__form-left-button-wrapper">
+                <input type="checkbox" class="order__form-check" />
+                <span >Напомнить о событии</span>
+              </div>
+              <div class="order__form-left-button-wrapper">
+                <input
+                  type="checkbox"
+                  class="order__form-check"
+                  id="checkPostcard"
+                />
+                <span>Открытка</span>
+              </div>
+            </div>
+
+            <div class="order__form-left-buttons-close">
+              <div class="order__form-left-button-wrapper">
+                <input type="checkbox" class="order__form-check" />
+                <span>Визитка</span>
+              </div>
+              <div class="order__form-left-button-wrapper">
+                <input
+                  type="checkbox"
+                  class="order__form-check"
+                  id="checkPostcard"
+                />
+                <span id="orderPrice">Полномасштабная открытка (+ 79грн)</span>
+              </div>
+            </div>
+            <div class="order__form-left-postcard">
+              <span>Повод для открытки</span>
+              <input type="tel" id="orderPostcard" />
+            </div>
+            <div class="order__form-left-text-postcard">
+              <span>Текст открытки</span>
+              <input
+                type="mail"
+                id="orderPostcardText"
+                placeholder="До 70 символов"
+              />
+              <p class="order__validate-text" id="textPostCardText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order__form-wrapper-right">
+        <div class="order__form-right-inner">
+          <h2 class="order__form-wrapper-title">Ваш заказ</h2>
+          <div class="order__you-order-wrapper"></div>
+          <div class="order__you-wrappers">
+            <div class="order__you-wrapper">
+              <p class="order__sum order__text">Сумма заказа</p>
+              <p class="order__sum-price order__num">6000 ₴</p>
+            </div>
+            <div class="order__you-wrapper">
+              <p class="order__delivery order__text">Доставка</p>
+              <p class="order__delivery-price order__num">100 ₴</p>
+            </div>
+            <div class="order__you-wrapper">
+              <p class="order__foto order__text">Фотоотчет</p>
+              <p class="order__foto-price order__num">15 ₴</p>
+            </div>
+          </div>
+
+          <div class="order__you-wrapper">
+            <p class="order__our">Всего</p>
+            <p class="order__our-price">5 304 ₴</p>
+          </div>
+
+          <button type="submit" class="order__button" id="order-button">
+            <div
+              class="product-card__bottom-button-desktop order__button-wrapper order__button-submit"
+            >
+              Оформить заказ
+              <img
+                src="./images/main/stock/button-branch.png"
+                alt="button-branch"
+              />
+            </div>
+          </button>
+        </div>
+        <div class="order__form-right-coupon">
+          <span>Купон</span>
+          <input type="num" id="orderCoupon" placeholder="Введите код купона" />
+          <p class="order__validate-text" id="couponText"></p>
+        </div>
+        <div class="order__form-right-certificate">
+          <span>Подарочный сертификат</span>
+          <input
+            type="num"
+            id="orderCertificate"
+            placeholder="Введите номер подарочного сертификата"
+          />
+          <p class="order__validate-text" id="certificateText"></p>
+        </div>
+
+        <button type="submit" class="order__form-button">
+          <div
+            class="product-card__bottom-button-desktop order__button-wrapper"
+          >
+            Применить
+            <img
+              src="./images/main/stock/button-branch.png"
+              alt="button-branch"
+            />
+          </div>
+        </button>
+      </div>
+    </div>
+  </form>
+</section>
